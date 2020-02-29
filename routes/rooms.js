@@ -30,6 +30,9 @@ router.get('/', function(req, res, next) {
     border-color : black;
     border-style: solid;
 }
+span{
+    vertical-align: -7.5px;
+}
 </style>
 <nav class="navbar navbar-light bg-light">
     <span class="navbar-brand mb-0 h1">Messenger</span>
@@ -38,7 +41,7 @@ router.get('/', function(req, res, next) {
     <a class="nav-link" href="/rooms">Rooms</a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="/Users">Users</a>
+    <a class="nav-link" href="/users">Users</a>
     </li>
     <li class="nav-item">
     <a class="nav-link" href="/Friends">Friends</a>
@@ -50,28 +53,28 @@ router.get('/', function(req, res, next) {
     </nav>
 
     <div class = "container">
-    <p>${req.session.nickname}님 환영합니다!</p>
+    <p style="margin-top: 1rem">${req.session.nickname}님 환영합니다!</p>
     <div class="row">
         <div class="col" style = "vertical-align: middle;">
-         <span style = "vertical-align : -11px;">방 번호 : ${result[0].num}</span>
+         <span>방 번호 : ${result[0].num}</span>
         </div>
         <div class = "col">
-            <span style = "vertical-align : -11px;"> 참여 인원 수 : ${result[0].member_count}</span>
+            <span> 참여 인원 수 : ${result[0].member_count}</span>
         </div>
-        <div class ="col" style = "text-align: right;">
-            <a href="room/${result[0].num}" class="btn btn-primary btn-lg active" role="button">입장</a>
+        <div class ="col" style = "text-align: center">
+            <a href="room/${result[0].num}" class="btn btn-primary active" role="button">입장</a>
         </div>
     </div>
     <p></p>
     <div class="row">
-        <div class="col" style = "vertical-align: middle;">
-         <span style = "vertical-align : -11px";>방 번호 : ${result[1].num}</span>
+        <div class="col">
+         <span>방 번호 : ${result[1].num}</span>
         </div>
         <div class = "col">
-            <span style = "vertical-align : -11px;"> 참여 인원 수 : ${result[1].member_count}</span>
+            <span> 참여 인원 수 : ${result[1].member_count}</span>
         </div>
-        <div class ="col" style = "text-align: right;">
-            <a href="room/${result[1].num}" class="btn btn-primary btn-lg active" role="button">입장</a>
+        <div class ="col" style = "text-align: center">
+            <a href="room/${result[1].num}" class="btn btn-primary active" role="button">입장</a>
         </div>
     </div>
     </div>

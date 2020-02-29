@@ -23,7 +23,6 @@ var html = `<!DOCTYPE html>
     </nav>
     <div id = "layer">
     <form action = "/login" method="post" class = "content">
-				<!--post메소드를 통해 쿼리 스트링 생성 없이 안전하게 전송-->
 				<p><input type = "text" name ="id" placeholder = "id"></p>
 				<p>
 				<p><input type = "password" name ="password" placeholder = "password"></p>
@@ -31,7 +30,6 @@ var html = `<!DOCTYPE html>
 				</p>
 				</form>
 	<p><a class="btn btn-primary" href="/signup" role="button">회원가입하기</a></p>
-	<a href='/test'>test</a>
 </div>
 </body>
 </html>`

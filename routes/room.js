@@ -25,16 +25,16 @@ exports.room = function(req,res){
     <span class="navbar-brand mb-0 h1">Messenger</span>
     <ul class="nav justify-content-center">
     <li class="nav-item">
-    <a class="nav-link" href="#">Rooms</a>
+    <a class="nav-link" href="/rooms">Rooms</a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="#">Users</a>
+    <a class="nav-link" href="/users">Users</a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="#">Friends</a>
+    <a class="nav-link" href="/Friends">Friends</a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="#">Logout</a>
+    <a class="nav-link" href="/Logout">Logout</a>
     </li>
     </ul>
     </nav>

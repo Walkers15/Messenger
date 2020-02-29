@@ -37,23 +37,27 @@ var html = `<!DOCTYPE html>
 </html>`
 //받은 정보로 mysql에 유저 정보 생성
 router.post('/process',(req,res,next)=>{
-    console.log('post');
     var post = req.body;
     if(post.id == '' || post.password == ''){
         res.send('아이디, 비밀번호를 입력하세요');
-    }
-    else{
-        db.query(`Insert into user(id,password,friend_count,date,friend_name,reception)
-        VALUES(?,?,0,NOW(),'','');`,[post.id,post.password],(err,result)=> {
-            if (err) {
-                res.end(err);
+    }else{
+        db.query('select * from user where id=?',[post.id],(err,result)=>{
+            console.log(result);
+            if(result[0] !== undefined){
+                res.send('동일한 이름이 이미 존재합니다.<BR>다른 이름으로 회원가입하세요.<BR><a href="/signup">회원가입 창으로 돌아가기</a>');
+            }else {
+                db.query(`Insert into user(id,password,friend_count,date,friend_name,reception)
+        VALUES(?,?,0,NOW(),'','');`, [post.id, post.password], (err, result) => {
+                    if (err) {
+                        res.end(err);
+                    }
+                    res.writeHead(302, {Location: `/`});
+                    res.end();
+                });
             }
-            res.writeHead(302, {Location: `/`});
-            res.end();
         });
     }
 });
-//정보 입력하는 곳
 router.get('/', function(req, res, next) {
     res.send(html);
 });

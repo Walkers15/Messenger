@@ -16,10 +16,10 @@ const sessionStore = new MySQLStore(sqlOption);
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const roomsRouter = require('./routes/rooms');
-//const friendsRouter = require('./routes/friends');
+const friendsRouter = require('./routes/friends');
 const signupRouter = require('./routes/signup');
 const loginRouter = require('./routes/login');
-//const logoutRouter = require('./routes/logout');
+const logoutRouter = require('./routes/logout');
 var app = express();
 // view engine setup , 기본설정
 app.use(bodyParser.urlencoded({extended: false}));
@@ -35,9 +35,11 @@ app.use(session({
 //여기부터 시작!
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/signup',signupRouter);
 app.use('/rooms',roomsRouter);
+app.use('/Friends',friendsRouter);
+app.use('/signup',signupRouter);
 app.post('/login',loginRouter);
+app.use('/Logout',logoutRouter);
 var nickname;
 var socketlist;
 app.get('/room/:roomId',(req,res)=>{
@@ -59,17 +61,16 @@ app.get('/room/:roomId',(req,res)=>{
                 if(err){
                     res.send(err)
                 }
-                console.log(list);
                 socketlist = '<ul><li>';
                 socketlist += list.replace(/,/gi,"</li><li>");;
                 socketlist = socketlist.slice(0,socketlist.length-4);
                 socketlist += '</ui>';
-                console.log(socketlist);
+                //console.log(socketlist);
                 res.send(`<html>
     <head>
     <meta charset="utf-8">
-    <title>Socket</title>
-    <link rel = "stylesheet" href = "../css/bootstrap.css">
+    <title>Messenger</title>
+    <link rel = "stylesheet" href = "/css/bootstrap.css">
     
     </head>
     <body>
@@ -81,12 +82,6 @@ app.get('/room/:roomId',(req,res)=>{
         #messages { list-style-type: none; margin: 0; padding: 0; }
         #messages li { padding: 5px 10px; }
         #messages li:nth-child(odd) { background: #eee; }
-        /*.area_sub::-webkit-scrollbar { width: 5.2px; }
-        .area_sub::-webkit-scrollbar-track { background-color:#5D5D5D; }
-        .area_sub::-webkit-scrollbar-thumb { background: #303030; }
-        .area_sub::-webkit-scrollbar-thumb:hover { background: #404040; }
-        .area_sub::-webkit-scrollbar-thumb:active { background: #808080; }
-        .area_sub::-webkit-scrollbar-button { display: none; }*/
     </style>
     <nav class="navbar navbar-light bg-light">
     <span class="navbar-brand mb-0 h1">Messenger</span>
@@ -95,7 +90,7 @@ app.get('/room/:roomId',(req,res)=>{
     <a class="nav-link" href="/rooms">Rooms</a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="/Users">Users</a>
+    <a class="nav-link" href="/users">Users</a>
     </li>
     <li class="nav-item">
     <a class="nav-link" href="/Friends">Friends</a>
@@ -128,8 +123,8 @@ app.get('/room/:roomId',(req,res)=>{
     $(() => {
         var socket = io({transports: ['websocket'], upgrade: false});      
         $('form').submit(() => {
-            socket.emit('nickname','${req.session.nickname}');
-            socket.emit('${'chatMessage_'+id}', $('#m').val());
+            //socket.emit('nickname','${req.session.nickname}');
+            socket.emit('${'chatMessage_'+id}', '${req.session.nickname}'+' : '+$('#m').val());
             $('#m').val('');
             return false;
         });
@@ -167,30 +162,32 @@ app.use(function(err, req, res, next) {
     res.send('error');
 });
 app.io = require('socket.io')();
-var list = new Map();
+var list = new Map(); //socket id 와 nickname을 저장하기 위한 맵(K : socket id V : nickname)
 app.io.on('connection', function(socket){
     console.log("a user connected");
+    db.query(`update user set online=1 where id=?`, [nickname]);
      list.set(socket.id,nickname);
-     console.log(list);
     db.query(`select * from rooms`,'',(err,result)=> {
         //var nick = app.request.session.nickname;
         var id;
         if (err) {
             throw err
         }
+        nickname = list.get(socket.id);
         if (result[0].member_list.includes(nickname)) {
             id = 1;
         } else {
             id = 2;
         }
+        nickname = list.get(socket.id);
         app.io.emit('chatMessage_' + id, nickname + '님이 들어오셨습니다');
-        console.log(socketlist);
+        //console.log(socketlist);
         app.io.emit('memberList_'+id,socketlist);
     });
-    //app.io.emit('UserList',);
     socket.on('disconnect', function(){
         var id;
         nickname = list.get(socket.id);
+        db.query(`update user set online=0 where id=?`, [nickname]);
         db.query(`select * from rooms`,'',(err,result)=>{
           if(err){
               throw err
@@ -237,14 +234,10 @@ app.io.on('connection', function(socket){
         app.io.emit('memberList_2',msg);
     });
     socket.on('chatMessage_1', function(msg){
-        console.log('message_1: ' + msg);
-        app.io.emit('chatMessage_1', nickname+' : '+msg);
+        app.io.emit('chatMessage_1', msg);
     });
     socket.on('chatMessage_2', function(msg){
-        console.log('message_2: ' + msg);
-        app.io.emit('chatMessage_2', nickname+' : '+msg);
-        //클라이언트에서 닉네임이랑 메세지 같이 보냄
-        //서버에서 구별해서 지정
+        app.io.emit('chatMessage_2', msg);
     });
 });
 module.exports = app;

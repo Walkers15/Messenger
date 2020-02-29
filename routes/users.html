@@ -1,0 +1,63 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Socket</title>
+    <link rel = "stylesheet" href = "../css/bootstrap.css">
+
+</head>
+<body>
+<style type = "text/css">
+    .row{
+        border-bottom: #00B7FF 1px solid;
+    }
+</style>
+<nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">Messenger</span>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link" href="/rooms">Rooms</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Users">Users</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Friends">Friends</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Logout">Logout</a>
+        </li>
+    </ul>
+</nav>
+<p style="padding-top: 20px"></p>
+<div class = "container">
+    <div class="row">
+        <div class = "col-6" style="text-align: center">
+            <a href="/" style="text-decoration-line: none">수신함</a>
+        </div>
+        <div class = "col-6" style="text-align: center">
+            <a href="/" style="text-decoration-line: none">친구 목록</a>
+        </div>
+    </div>
+    <p style="margin-top: 1rem"></p>
+    ${postbox}
+</div>
+</body>
+</html>
+
+<!--
+/////
+<div class="row">
+    <div class="col" style = "vertical-align: middle;">
+        <span style = "vertical-align : -11px;">아이디 : ${result[0].num}</span>
+    </div>
+    <div class = "col">
+        <span style = "vertical-align : -11px;"> 가입날짜 : ${result[0].member_count}</span>
+    </div>
+    <div class ="col" style = "text-align: right;">
+        <span style = "vertical-align : -11px;"> 친구수 : ${result[0].member_count}</span>
+    </div>
+    <div class ="col" style = "text-align: right;">
+        <a href="room/${result[1].num}" class="btn btn-primary btn-lg active" role="button">친구 요청</a>
+    </div>
+</div>
+<p></p>-->
