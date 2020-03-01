@@ -1,1 +1,162 @@
-<mxfile host="www.draw.io" modified="2020-03-01T06:32:39.822Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36" version="12.7.9" etag="yl5sTESwj9xyAyL7ow6a" type="github"><diagram id="DNoplas7Q6dajs_aRPpO">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="www.draw.io" modified="2020-03-01T07:24:06.607Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36" etag="RAe4q9zGh-3crWZm2flM" version="12.7.9" type="github">
+  <diagram id="DNoplas7Q6dajs_aRPpO" name="Page-1">
+    <mxGraphModel dx="2257" dy="1192" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qqBocKkBclo5KzFJRU4A-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="qqBocKkBclo5KzFJRU4A-5" target="qqBocKkBclo5KzFJRU4A-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-5" value="사용자의&lt;br&gt;/Users 접속" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-398.5" y="630" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="qqBocKkBclo5KzFJRU4A-6" target="qqBocKkBclo5KzFJRU4A-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-6" value="서버로부터&lt;br&gt;유저 목록 조회" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-398.5" y="720" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-8" value="친구요청 버튼&lt;br&gt;없이 출력" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="-225.5" y="805" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qqBocKkBclo5KzFJRU4A-10" target="qqBocKkBclo5KzFJRU4A-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="qqBocKkBclo5KzFJRU4A-10" target="qqBocKkBclo5KzFJRU4A-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-10" value="이 유저와 친구인가?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-420" y="800" width="143" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.516;entryY=0.217;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="qqBocKkBclo5KzFJRU4A-11" target="qqBocKkBclo5KzFJRU4A-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-11" value="친구요청 버튼&lt;br&gt;포함하여 출력" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="-408.5" y="900" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-14" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="-265.5" y="814" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-15" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="-335.5" y="870" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-16" value="친구 신청" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="-383.5" y="610" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="qqBocKkBclo5KzFJRU4A-17" target="qqBocKkBclo5KzFJRU4A-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-17" value="&lt;br&gt;친구 요청 버튼 클릭" style="html=1;strokeWidth=2;shape=manualInput;whiteSpace=wrap;rounded=1;size=26;arcSize=11;" vertex="1" parent="1">
+          <mxGeometry x="-410" y="980" width="123" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-18" value="해당 유저의&lt;br&gt;messenger.user.reception 데이터베이스에&lt;br&gt;사용자 이름 추가" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-480" y="1070" width="263" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qqBocKkBclo5KzFJRU4A-23" target="qqBocKkBclo5KzFJRU4A-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-23" value="사용자의&lt;br&gt;/Friends 접속" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-730" y="35" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-24" value="친구 신청 수락/거절" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="-740" y="15" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="qqBocKkBclo5KzFJRU4A-25" target="qqBocKkBclo5KzFJRU4A-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-25" value="서버로부터&lt;br&gt;친구신청 수신&lt;br&gt;목록 조회" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-730" y="125" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qqBocKkBclo5KzFJRU4A-26" target="qqBocKkBclo5KzFJRU4A-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-26" value="&lt;br&gt;친구 신청에 대한&lt;br&gt;응답 입력" style="html=1;strokeWidth=2;shape=manualInput;whiteSpace=wrap;rounded=1;size=26;arcSize=11;" vertex="1" parent="1">
+          <mxGeometry x="-730" y="210" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qqBocKkBclo5KzFJRU4A-27" target="qqBocKkBclo5KzFJRU4A-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qqBocKkBclo5KzFJRU4A-27" target="qqBocKkBclo5KzFJRU4A-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-27" value="친구 신청을&lt;br&gt;수락했는가?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-755" y="295" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qqBocKkBclo5KzFJRU4A-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-400" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-28" value="사용자의&lt;br&gt;messenger.user.reception 데이터베이스에 있는 해당 이름 삭제" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-530" y="315" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-29" value="${유저 이름}님의 친구 신청이 거절되었습니다" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.display;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-530" y="405" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-33" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="-580" y="325" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qqBocKkBclo5KzFJRU4A-34" target="qqBocKkBclo5KzFJRU4A-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-34" value="데이터베이스에서&amp;nbsp; 사용자의&lt;br&gt;messenger.user.frined_name에 이름 추가&lt;br&gt;및 friend_count 증가" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-800" y="405" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="qqBocKkBclo5KzFJRU4A-35" target="qqBocKkBclo5KzFJRU4A-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qqBocKkBclo5KzFJRU4A-35" target="qqBocKkBclo5KzFJRU4A-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-35" value="해당 유저의&lt;br&gt;reception에&lt;br&gt;내 이름이 있는가?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-780" y="505" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-36" value="데이터베이스에서&amp;nbsp; 해당 유저의&lt;br&gt;messenger.user.frined_name에 이름 추가&lt;br&gt;및 friend_count 증가" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-520" y="525" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qqBocKkBclo5KzFJRU4A-37" target="qqBocKkBclo5KzFJRU4A-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-37" value="데이터베이스에서&amp;nbsp; 해당 유저의&lt;br&gt;messenger.user.reception 데이터베이스에 있는 내 이름 삭제" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-810" y="625" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-38" value="데이터베이스에서 해당 유저의&lt;br&gt;messenger.user.frined_name에 이름 추가&lt;br&gt;및 friend_count 증가" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-800" y="710" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-47" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="-670" y="385" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-48" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="-570" y="533" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-52" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="-667.5" y="605" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="qqBocKkBclo5KzFJRU4A-53" target="qqBocKkBclo5KzFJRU4A-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-53" value="사용자의&lt;br&gt;/Friends 접속" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-727.5" y="840" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.496;entryY=0.207;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="qqBocKkBclo5KzFJRU4A-54" target="qqBocKkBclo5KzFJRU4A-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-54" value="서버로부터&lt;br&gt;친구 목록 조회" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-727.5" y="940" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qqBocKkBclo5KzFJRU4A-57" target="qqBocKkBclo5KzFJRU4A-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-57" value="&lt;br&gt;친구 삭제" style="html=1;strokeWidth=2;shape=manualInput;whiteSpace=wrap;rounded=1;size=26;arcSize=11;" vertex="1" parent="1">
+          <mxGeometry x="-727.5" y="1000" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-58" value="친구 삭제" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="-712.5" y="820" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qqBocKkBclo5KzFJRU4A-59" value="&lt;span style=&quot;white-space: normal&quot;&gt;데이터베이스에서&amp;nbsp; 자신과 해당 유저의&lt;br&gt;&lt;/span&gt;messenger.user.frined_name에 이름 삭제&lt;br&gt;및 friend_count 감소&lt;span style=&quot;white-space: normal&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="-795" y="1060" width="235" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
